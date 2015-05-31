@@ -1,0 +1,26 @@
+<div class="header">
+     <div class="container">
+       <h1>threadly</h1>
+     </div>
+   </div>
+
+   <div class="main">
+     <div class="container">
+
+   
+       
+       <%= form_for @new_post do |f| %>
+           <%= f.label :comment %> <br>
+           <%= f.text_field :comment %>
+           <%= f.submit %>
+       <% end %>
+
+       <ul class="comments">
+           <% @all_posts.each do |f| %>
+             <li><%= f.comment %></li>
+           <% end %>
+        </ul>
+     </div>
+   </div>
+
+   <script src="http://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
